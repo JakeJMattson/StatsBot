@@ -1,3 +1,8 @@
 package me.jakejmattson.statsbot.extensions
 
-fun String.wrapCode() = "```$this```"
+inline fun wrapCode(builderAction: StringBuilder.() -> Unit) =
+    buildString {
+        appendln("```")
+        apply(builderAction)
+        appendln("```")
+    }

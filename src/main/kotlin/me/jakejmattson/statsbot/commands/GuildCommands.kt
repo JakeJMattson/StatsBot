@@ -25,7 +25,6 @@ fun guildCommands() = commands {
                     addField("Channels", channelInfo())
                     addField("Emotes", emoteInfo())
                     addField("Other", otherInfo())
-
                     addField("Invite", invite)
                 }
             }
@@ -36,31 +35,29 @@ fun guildCommands() = commands {
 private fun Guild.memberInfo(): String {
     val onlineMembers = members.filter { it.onlineStatus != OnlineStatus.OFFLINE }.size
 
-    return buildString {
+    return wrapCode {
         appendln("Owner - ${owner?.fullName()}")
         appendln("Users - $onlineMembers online/${members.size}")
         appendln("Nitro - Tier ${boostTier.key} ($boostCount boosts)")
         appendln("Roles - ${roles.size}")
-    }.wrapCode()
+    }
 }
 
-private fun Guild.channelInfo() = buildString {
+private fun Guild.channelInfo() = wrapCode {
     appendln("Categories - ${categories.size}")
     appendln("Text       - ${textChannels.size}")
     appendln("Voice      - ${voiceChannels.size}")
-}.wrapCode()
+}
 
-private fun Guild.emoteInfo() = buildString {
+private fun Guild.emoteInfo() = wrapCode {
     val staticEmotes = emotes.filter { !it.isAnimated }
     val animatedEmotes = emotes.filter { it.isAnimated }
 
     appendln("Static   - ${staticEmotes.size}/$maxEmotes")
     appendln("Animated - ${animatedEmotes.size}/$maxEmotes")
-}.wrapCode()
+}
 
-private fun Guild.otherInfo() = buildString {
-
+private fun Guild.otherInfo() = wrapCode {
     appendln("Region   - $region")
     appendln("Creation - ${timeCreated.format(DateTimeFormatter.RFC_1123_DATE_TIME)}")
-
-}.wrapCode()
+}
