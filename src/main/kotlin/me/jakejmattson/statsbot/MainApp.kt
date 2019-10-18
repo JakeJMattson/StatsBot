@@ -7,7 +7,6 @@ fun main(args: Array<String>) {
 
     startBot(token) {
         configure {
-            globalPath = "me.jakejmattson.statsbot"
             prefix = "="
         }
     }

@@ -1,10 +1,11 @@
 package me.jakejmattson.statsbot.commands
 
-import me.aberrantfox.kjdautils.api.dsl.*
+import me.aberrantfox.kjdautils.api.dsl.command.*
 import me.aberrantfox.kjdautils.extensions.jda.fullName
 import me.jakejmattson.statsbot.extensions.*
 import net.dv8tion.jda.api.OnlineStatus
 import net.dv8tion.jda.api.entities.Guild
+import java.awt.Color
 import java.time.format.DateTimeFormatter
 
 @CommandSet("Guild")
@@ -13,10 +14,11 @@ fun guildCommands() = commands {
         execute {
             val guild = it.guild!!
 
-            it.respondEmbed {
+            it.respond {
                 title = guild.name
                 description = guild.description
                 thumbnail = guild.iconUrl
+                color = Color(0x00bfff)
 
                 with(guild) {
                     val invite = vanityUrl ?: retrieveInvites().complete().maxBy { it.uses }?.url ?: "<None>"
