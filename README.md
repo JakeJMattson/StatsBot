@@ -23,5 +23,8 @@
 
 A Discord bot for gathering and analyzing guild statistics. 
 
+## Commands
+See [commands.md](commands.md) for a list of commands.
+
 ## License
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
