@@ -11,7 +11,9 @@
 | Overview | <none>    | No Description Provider |
 
 ## Utility
-| Commands | Arguments | Description          |
-| -------- | --------- | -------------------- |
-| Help     | (Command) | Display a help menu. |
+| Commands | Arguments | Description                                 |
+| -------- | --------- | ------------------------------------------- |
+| Help     | (Command) | Display a help menu.                        |
+| Ping     | <none>    | Display the network ping of the bot.        |
+| Uptime   | <none>    | Displays how long the bot has been running. |
 

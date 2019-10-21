@@ -1,6 +1,5 @@
 package me.jakejmattson.statsbot.commands
 
-import com.sun.org.apache.xml.internal.serializer.utils.Utils.messages
 import me.aberrantfox.kjdautils.api.dsl.command.*
 import me.aberrantfox.kjdautils.extensions.stdlib.toMinimalTimeString
 import java.awt.Color
