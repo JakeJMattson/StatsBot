@@ -23,6 +23,9 @@
 
 A Discord bot for gathering and analyzing guild statistics. 
 
+## Setup
+See [setup.md](setup.md) for a setup guide.
+
 ## Commands
 See [commands.md](commands.md) for a list of commands.
 
