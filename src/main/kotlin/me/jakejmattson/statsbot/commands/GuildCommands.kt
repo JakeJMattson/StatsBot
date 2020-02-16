@@ -1,5 +1,6 @@
 package me.jakejmattson.statsbot.commands
 
+import me.aberrantfox.kjdautils.api.annotation.CommandSet
 import me.aberrantfox.kjdautils.api.dsl.command.*
 import me.aberrantfox.kjdautils.extensions.jda.fullName
 import me.jakejmattson.statsbot.extensions.*
